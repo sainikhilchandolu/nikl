@@ -1,0 +1,150 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            border: 2px solid black;
+            width:200px;
+            height:200px;
+            background-color: orangered;
+            transition :margin-left;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <input type="number" id="num">
+    <script>
+        let a=document.getElementsByTagName("h1")[0];
+        let b=document.getElementById("num")
+        b.addEventListener("change",function(){
+            a.style.marginLeft=b.value+"px";
+
+        })
+
+
+    </script>
+
+    
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day ❤️</title>
+
+<style>
+    body{
+        margin:0;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+        font-family: 'Segoe UI', sans-serif;
+        overflow:hidden;
+    }
+
+    .card{
+        background:white;
+        padding:40px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        animation:fadeIn 2s ease-in-out;
+        max-width:350px;
+    }
+
+    h1{
+        color:#ff4b5c;
+        margin-bottom:10px;
+    }
+
+    p{
+        color:#555;
+        font-size:18px;
+    }
+
+    button{
+        margin-top:20px;
+        padding:12px 25px;
+        border:none;
+        border-radius:25px;
+        background:#ff4b5c;
+        color:white;
+        font-size:16px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#ff1e38;
+        transform:scale(1.1);
+    }
+
+    .heart{
+        position:absolute;
+        color:#ff4b5c;
+        font-size:20px;
+        animation:float 6s linear infinite;
+    }
+
+    @keyframes float{
+        from{
+            transform:translateY(100vh);
+            opacity:1;
+        }
+        to{
+            transform:translateY(-10vh);
+            opacity:0;
+        }
+    }
+
+    @keyframes fadeIn{
+        from{opacity:0; transform:translateY(20px);}
+        to{opacity:1; transform:translateY(0);}
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Happy Valentine's Day ❤️</h1>
+    <p>“You are the reason I believe in love”</p>
+    
+    <button onclick="showMessage()">Click for a Surprise</button>
+</div>
+
+<script>
+function showMessage(){
+    alert("You are my today and all of my tomorrows 💖");
+}
+
+
+setInterval(()=>{
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+10)+"px";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),6000);
+},500);
+</script>
+
+</body>
+</html>
+
+
+
